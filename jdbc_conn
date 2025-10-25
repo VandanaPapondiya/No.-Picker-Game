@@ -1,0 +1,21 @@
+//1.package import
+import java.sql.*;
+class Demo1{
+	public static void main(String ar[])throws Exception
+	{
+		//2.load and register driver
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		//3.opening db connection to my sql server
+		String url="jdbc:mysql://localhost:3306/mydb?useSSL=false";
+		String uname="root";
+		String upass="Vann@123";
+		Connection con=DriverManager.getConnection(url,uname,upass);
+		//4.create statement obj to execute query
+		Statement st=con.createStatement();
+		//5.Execute query
+		String q="insert into login values('pppo','888')";
+		st.executeUpdate(q);
+		System.out.println("data insert...");
+		con.close();
+	}
+}
