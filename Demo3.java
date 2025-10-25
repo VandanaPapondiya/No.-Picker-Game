@@ -1,8 +1,8 @@
 import java.awt.*;
-import javax.swing.*;
 import java.awt.event.*;
 import java.sql.*;
-//main page, database name=>tb col, table_name=>login, col_name=ur
+import javax.swing.*;
+//main page, database name=>tb, table_name=>login, col_name=ur
 class FDemo extends JFrame implements ActionListener
 {
 	int a=1;
